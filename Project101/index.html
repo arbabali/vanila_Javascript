@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>SET GAME</title>
+    <link rel="stylesheet" href="style.css"></link>
+ 
+</head>
+<body>
+    <h1>SET GAME</h1>
+    <div id="startingPage" class=textShow >
+    <button class=myButton id="game-button">START GAME</button>
+    <br></br>
+    <button  class=myButton  id="rulesButton">Rules</button>
+        <div  id="textRules" class="textHide " >
+        <ul sttyle=padding-right:50px;>
+        <li><button class=myButton id="readHereButton">Read Here</button></li>
+            <div id="Textbody" class=textHide></div>
+                    <div id="pop-up">
+
+                        <!-- Popup window that displays the rules -->
+                        <div id="rules-outer" class="pop-up-outer"></div>
+                        <div id="rules-inner" class="pop-up-inner">
+                        <div id="closeButton">
+                            <img id="close" src = "images/close-x.svg" alt = "Close" height= "20" width = "20">
+                        </div>
+                        <h3>Rules</h3>
+                        <p ><img id="image-hash-1291832557" class="" src="https://images.squarespace-cdn.com/content/v1/59ea6080a803bb2f70ecbae5/1515093599263-YFJLMDJMVBXWA3GPLQ30/ke17ZwdGBToddI8pDm48kD2z-LLWBH7obTt8oweMjYNZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PImOHbQbjXasSwxFcLdk_scOGqT4Z6kt8j9Nmw5KBS9fwKMshLAGzx4R3EDFOm1kBS/SET+board.jpg" alt="" style="max-width: 250px;" width="200" height="130"></p>
+                        <p ><img id="image-hash--1910715114" class="" src="https://www.theboardgamefamily.com/wp-content/uploads/2013/03/SetCards.jpg" alt="" style="max-width: 200px;" width="200" height="130"></p>
+                        <p>The goal of the game is to find SETs of three cards from the twelve cards placed on the desk. All cards have four properties:</p>
+                        <ul>
+                            <li>
+                                <strong>SHAPE</strong>: oval, squiggle, diamond</li>
+                            <li >
+                             <strong>COLOR</strong>: red, green, purlple</li>
+                            <li >
+                                <strong>NUMBER</strong>: 1,2, or 3 shapes</li>
+                            <li >
+                                <strong>SHADING</strong>: solid, striped or outlined shapes</li>
+                            </ul>
+                        <p >Every SET consists of three cards, where all properties are:</p>
+                            <ul>
+                                <li >the same on all of the cards</li>
+                             <li>different on all of the cards.</li>
+                            </ul>
+                        <p>The selected cards have to adhere to these rules for ALL properties. Worded differently: if the three cards have the same number of shapes, or 1 2 and 3; if the color is the same, or all three colors; if all shapes are solid, or one solid, striped and empty, etc...</p>
+                    </div>
+            </div>
+            
+        <li><button  class=myButton
+                onclick="window.open('https://www.setgame.com/sites/default/files/instructions/SET%20INSTRUCTIONS%20-%20ENGLISH.pdf','_blank')">
+                Read PDF</button></li>
+        </ul>    
+    </div>
+    <br></br> 
+    <button  class=myButton   id="setPlayer-button">Set Players</button>
+        <div id="setPlayer-body" class="textHide " >
+        <input type='number' min="1" max="10"></input>
+        <button class=myButton  id="set-Button">Set</button>
+        <div id="set-Down" class="textHide"> 
+             <div id="setPlayersData">
+
+            </div>
+            <button class=myButton  id="DoneButton" >Done</button>
+           
+        </div>     
+        </div>
+    <br></br>
+    <button class=myButton  id="gameMode-button"  >Game Mode </button>
+              <form id="modeCHOICES" style="display:none">
+                <input type="radio" name="mchoice" value="PRACTICE">PRACTICE</input>
+                <input type="radio" name="mchoice" value="COMPETATIVE">COMPETATIVE </input>
+            </form>
+            
+    <br></br>
+    <button class=myButton  id="Diffbutton">Diffculty</button>
+            <form id="diffCHOICES" style="display:none">
+                <input type="radio" name="dchoice" value="EASY">EASY</input>
+                <input type="radio" name="dchoice" value="HARD">HARD </input>
+                <input type="radio" name="dchoice" value="ADVANCE">ADVANCE </input>
+            </form>
+    <br><br>
+    <button class=myButton id="credits-button">Credits</button>
+    <div id="credit" class="textHide"></div>
+        <div id="pop-up">
+
+            <!-- Popup window that displays the credit -->
+            <div id="credit-outer" class="pop-up-outer2"></div>
+            <div id="credit-inner" class="pop-up-inner2">
+                <div id="creditcloseButton">
+                    
+                    <img id="close" src = "images/close-x.svg" alt = "Close" height= "20" width = "20">
+                
+                </div>
+                <h1>WEB PROGRAMING PROJECT</h1>
+                <h2>CREATED BY ARBAB ALI  <strong>D1CPLD</strong></h2>
+                <footer>Thank You.</footer>
+            </div>
+        </div>  
+             
+    </div>
+    <div id="gamePage" class="textHide" >
+        <main>
+            <div id="board" >
+              <div id="menu" >
+               
+                  <button id="drawCards">Plus three cards</button>
+                  <button id="hint">Is there a SET?</button>
+                  <button id="showSet">Show me a SET</button>
+                  <button id="Quit">Quit</button>
+                
+              </div>
+          
+            
+              <div id="playersList">
+                <button>Player</button>
+                <button>Player</button>
+                <button>Player</button>
+                <button>Player</button>
+                <button>Player</button>
+              </div>
+              <div id="gameStatus">
+                  
+                <ul class="list">
+                    <li><strong>Cards in deck:</strong> <span id="deck-count">69</span></li>
+                    <li><strong>Score:</strong> <span id="score">0</span></li>
+                    <li><span id="timer"> <strong>Timer:</strong> 0 min 0 sec</span></li>
+                    <li ><strong>Player:</strong><span id="player"></span></li>
+                  </ul>
+                
+              </div> 
+              <div  id="game">
+                Game    
+                </div>
+              
+            </div>
+
+          </main>
+
+        
+          <div id="prevMove">  <div id="message" class="neutral"></div> <div id="prevCards"></div> </div>
+          
+    <!--  <div class ="score" id="score">Score <span>0</span></div>
+
+    <div class="topleft" id="timer">Timer</div>
+   
+    
+    -->
+       
+      
+       
+    </div>
+    <div id="gameOver" class="textHide" >
+        <h3>GAME IS OVER</h3>
+        <div id="lastScore" >FINAL SCORES ARE<span >0</span></div> <button id="restart-game" class="myButton">Replay with Same Settings</button><button id="backQuit" class="myButton">Back To main Menu</button> </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
