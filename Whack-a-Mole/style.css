@@ -1,0 +1,29 @@
+.square {
+    width:  200px;
+    height:200px ;
+    border-style: solid;
+    border-color: black;
+}
+.grid {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: right;
+    align-content: right;
+    width: 618px;
+    height: 618px;
+}
+body {
+    /*(Cursor image must be 32*32 pixles)*/
+  cursor: url("cursor.cur"),auto;
+}   
+
+.mole
+{
+    background-image: url('mole.jpg');
+    background-size: cover;
+}
+.moleOnClick
+{
+    background-image: url('mole_click.jpg');
+    background-size: cover;
+}
